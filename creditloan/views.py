@@ -17,6 +17,8 @@ def injest_customer_data():
             current_debt=None  # You might need to adjust this based on your data
         )
         customer.save()
+
+    return {"status":200}
     
 
 def injest_loan_data():
@@ -39,3 +41,10 @@ def injest_loan_data():
         loan.save()
     print("successfully stored data")
     
+
+
+def run_background_workers():
+    status = injest_customer_data()['status']
+
+    if status == 200:
+        injest_loan_data()

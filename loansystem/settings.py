@@ -81,7 +81,7 @@ DATABASES = {
         'NAME': 'loan_db',
         'USER': 'postgres',
         'PASSWORD': 'gaurav321r',
-        'HOST': 'localhost',
+        'HOST': 'db',
         'PORT': '5432', 
     }
 }
